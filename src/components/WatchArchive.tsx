@@ -17,7 +17,7 @@ const defaultKeyframes = [
   { x: 0, z: 0, cx: 0, cy: 0.4, cz: 2.2, lx: 0, ly: 0, lz: 0, fov: 35, yaw: 0 },
 ];
 
-const JewelryArchive: React.FC = () => {
+const WatchArchive: React.FC = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [activeTabIdx, setActiveTabIdx] = useState(0);
@@ -276,7 +276,7 @@ const JewelryArchive: React.FC = () => {
 
   return (
     <div 
-      className="relative text-black font-inter border-t border-[#D4AF37]/10 bg-[#fdfbf7]" 
+      className="relative text-white font-inter border-t border-white/5 bg-black" 
       ref={containerRef} 
       style={{ minHeight: '600vh', zIndex: 40 }}
     >
@@ -285,7 +285,7 @@ const JewelryArchive: React.FC = () => {
         style={{ pointerEvents: 'none' }}
       >
         <canvas ref={canvasRef} className="w-full h-full block" />
-        <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(ellipse_75%_65%_at_50%_60%,transparent_30%,rgba(253,251,247,0.4)_60%,rgba(253,251,247,0.8)_90%,#fdfbf7_100%)]" />
+        <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(ellipse_75%_65%_at_50%_60%,transparent_30%,rgba(0,0,0,0.4)_60%,rgba(0,0,0,0.8)_90%,#000000_100%)]" />
       </div>
 
       <div className="relative z-10 pointer-events-none">
@@ -294,13 +294,13 @@ const JewelryArchive: React.FC = () => {
         <section className="archive-section h-screen flex items-end p-10 md:p-24 pb-32">
           <div className="max-w-4xl pointer-events-auto">
             <h1 className="text-[clamp(64px,13vw,180px)] font-serif font-light leading-[0.88] tracking-tight">
-              <span className="block text-[#D4AF37] font-luxury italic text-[0.4em] tracking-[0.2em] mb-4">L'Art du Bijou</span>
-              <span className="block text-black">IMMORTEL</span>
-              <span className="block gold-gradient">ÉLÉGANCE</span>
+              <span className="block text-white/40 font-luxury text-[0.4em] tracking-[0.2em] mb-4">Mastering Time</span>
+              <span className="block text-white">CHRONOS</span>
+              <span className="block monochrome-gradient">PRECISION</span>
             </h1>
             <div className="mt-12 flex flex-col gap-1 items-start">
-              <span className="text-[11px] uppercase tracking-[0.4em] font-medium text-black font-mono">Collection Privée № 001</span>
-              <span className="text-[11px] uppercase tracking-[0.16em] text-black/40">Or Pur / Diamants Certifiés / Créations Artisanales</span>
+              <span className="text-[11px] uppercase tracking-[0.4em] font-medium text-white font-mono">Reference № 729-032</span>
+              <span className="text-[11px] uppercase tracking-[0.16em] text-white/40">Oyster Steel / Perpetual Movement / Sapphire Crystal</span>
             </div>
           </div>
         </section>
@@ -309,25 +309,25 @@ const JewelryArchive: React.FC = () => {
         <section className="archive-section min-h-screen flex items-center p-10 md:p-24">
           <div className="max-w-xl pointer-events-auto">
             <div className="flex items-center gap-4 mb-8">
-              <div className="w-12 h-px bg-[#D4AF37]" />
-              <span className="text-[10px] uppercase font-bold tracking-[0.4em] text-[#D4AF37]">Maitrise Joaillière</span>
+              <div className="w-12 h-px bg-white/40" />
+              <span className="text-[10px] uppercase font-bold tracking-[0.4em] text-white/40">Engineering Excellence</span>
             </div>
-            <h2 className="text-[clamp(40px,6vw,80px)] font-serif font-light leading-[0.92] tracking-tight text-black mb-10">Un Héritage Précieux</h2>
-            <p className="text-sm leading-[2] text-black/55 max-w-sm mb-12 font-light">
-              Jewelry Business incarne l'excellence de la joaillerie. Chaque pièce est conçue pour capturer la lumière et sublimer votre essence, alliant tradition artisanale et vision contemporaine.
+            <h2 className="text-[clamp(40px,6vw,80px)] font-serif font-light leading-[0.92] tracking-tight text-white mb-10">A Legacy Reimagined</h2>
+            <p className="text-sm leading-[2] text-white/40 max-w-sm mb-12 font-light uppercase tracking-wider">
+              Luxury Watches represents the pinnacle of horological engineering. Every timepiece is a testament to precision, crafted for the modern gentleman who values time as his most precious asset.
             </p>
-            <div className="flex gap-12 mt-12 pt-12 border-t border-[#D4AF37]/20">
+            <div className="flex gap-12 mt-12 pt-12 border-t border-white/10">
               <div className="flex flex-col gap-1">
-                <span className="text-4xl font-serif text-[#D4AF37]">18K</span>
-                <span className="text-[10px] uppercase tracking-[0.15em] text-black/40">Or Pur</span>
+                <span className="text-4xl font-serif text-white">72H</span>
+                <span className="text-[10px] uppercase tracking-[0.15em] text-white/30">Reserve</span>
               </div>
               <div className="flex flex-col gap-1">
-                <span className="text-4xl font-serif text-[#D4AF37]">VVS1</span>
-                <span className="text-[10px] uppercase tracking-[0.15em] text-black/40">Clarté</span>
+                <span className="text-4xl font-serif text-white">100M</span>
+                <span className="text-[10px] uppercase tracking-[0.15em] text-white/30">Depth</span>
               </div>
               <div className="flex flex-col gap-1">
-                <span className="text-4xl font-serif text-[#D4AF37]">RDC</span>
-                <span className="text-[10px] uppercase tracking-[0.15em] text-black/40">Origine</span>
+                <span className="text-4xl font-serif text-white">COSC</span>
+                <span className="text-[10px] uppercase tracking-[0.15em] text-white/30">Certified</span>
               </div>
             </div>
           </div>
@@ -337,21 +337,21 @@ const JewelryArchive: React.FC = () => {
         <section className="archive-section min-h-screen flex items-center justify-end p-10 md:p-24 text-right">
           <div className="max-w-xl pointer-events-auto">
             <div className="flex items-center gap-4 mb-8 justify-end">
-              <span className="text-[10px] uppercase font-bold tracking-[0.4em] text-[#D4AF37]">Spécifications</span>
-              <div className="w-12 h-px bg-[#D4AF37]" />
+              <span className="text-[10px] uppercase font-bold tracking-[0.4em] text-white/40">Technical Specs</span>
+              <div className="w-12 h-px bg-white/40" />
             </div>
-            <h2 className="text-[clamp(40px,6vw,80px)] font-serif font-light leading-[0.92] tracking-tight text-black mb-10">Cœur d'Or</h2>
+            <h2 className="text-[clamp(40px,6vw,80px)] font-serif font-light leading-[0.92] tracking-tight text-white mb-10">Pure Caliber</h2>
             <div className="flex flex-col gap-4">
               {[
-                { label: 'Métal', val: 'Or Jaune 18 Carats' },
-                { label: 'Pierres', val: 'Diamants de Taille Brillant' },
-                { label: 'Chaîne', val: 'Maille Forçat Ajustable' },
-                { label: 'Fermoir', val: 'Mousqueton de Haute Sécurité' },
-                { label: 'Garantie', val: 'À Vie / Certificat GIA' },
+                { label: 'Movement', val: 'Mechanical Self-Winding' },
+                { label: 'Case', val: '41mm Oystersteel' },
+                { label: 'Dial', val: 'Sunray Finish Anthracite' },
+                { label: 'Bracelet', val: 'Oyster Three-Piece Link' },
+                { label: 'Warranty', val: '5 Years Hub-Service' },
               ].map(spec => (
-                <div key={spec.label} className="flex justify-between items-baseline border-b border-[#D4AF37]/5 py-5 gap-12 group hover:border-[#D4AF37]/40 transition-colors">
-                  <span className="text-[11px] uppercase tracking-[0.2em] text-black/30">{spec.label}</span>
-                  <span className="text-2xl font-serif text-black group-hover:text-[#D4AF37] transition-colors">{spec.val}</span>
+                <div key={spec.label} className="flex justify-between items-baseline border-b border-white/5 py-5 gap-12 group hover:border-white transition-colors">
+                  <span className="text-[11px] uppercase tracking-[0.2em] text-white/20">{spec.label}</span>
+                  <span className="text-2xl font-serif text-white group-hover:text-silver transition-colors">{spec.val}</span>
                 </div>
               ))}
             </div>
@@ -362,21 +362,21 @@ const JewelryArchive: React.FC = () => {
         <section className="archive-section min-h-screen flex items-end p-10 md:p-24 pb-40">
           <div className="pointer-events-auto">
             <div className="flex items-center gap-4 mb-8">
-              <div className="w-12 h-px bg-[#D4AF37]" />
-              <span className="text-[10px] uppercase font-bold tracking-[0.4em] text-[#D4AF37]">Détails Distinctifs</span>
+              <div className="w-12 h-px bg-white/40" />
+              <span className="text-[10px] uppercase font-bold tracking-[0.4em] text-white/40">Signature Details</span>
             </div>
-            <h2 className="text-[clamp(40px,6vw,80px)] font-serif font-light leading-[0.92] tracking-tight text-black mb-16">Éléments Iconiques</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-[#D4AF37]/10 max-w-lg border border-[#D4AF37]/20 backdrop-blur-xl">
+            <h2 className="text-[clamp(40px,6vw,80px)] font-serif font-light leading-[0.92] tracking-tight text-white mb-16">The Architecture</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-white/5 max-w-lg border border-white/10 backdrop-blur-xl">
               {[
-                { id: '01', name: 'Polissage Miroir', desc: 'Une technique de finition exclusive pour un éclat qui ne ternit jamais.' },
-                { id: '02', name: 'Serti Main', desc: 'Chaque diamant est méticuleusement placé par nos maîtres artisans.' },
-                { id: '03', name: 'Design Fluide', desc: 'Une ergonomie pensée pour épouser les formes avec une grâce absolue.' },
-                { id: '04', name: 'Sceau d\'Authenticité', desc: 'Chaque pièce porte le poinçon officiel de Jewelry Business.' },
+                { id: '01', name: 'Laser Etching', desc: 'Precision numerals etched with microscopic accuracy for ultimate legibility.' },
+                { id: '02', name: 'Blue Parachrom', desc: 'A hairspring that offers greater resistance to shocks and temperature variations.' },
+                { id: '03', name: 'Cerachrom Bezel', desc: 'Virtually scratchproof ceramic bezel that remains unaffected by ultraviolet rays.' },
+                { id: '04', name: 'Chromalight', desc: 'A blue glow that provides exceptional visibility in dark conditions.' },
               ].map(item => (
-                <div key={item.id} className="bg-white/90 p-10 flex flex-col gap-3 group">
-                  <span className="text-[11px] font-serif font-bold text-[#D4AF37] tracking-[0.3em] opacity-40 group-hover:opacity-100 transition-opacity">{item.id}</span>
-                  <h3 className="text-xl font-serif font-medium uppercase tracking-wider text-black">{item.name}</h3>
-                  <p className="text-[11px] leading-[1.8] text-black/40 font-serif tracking-tight">{item.desc}</p>
+                <div key={item.id} className="bg-black/90 p-10 flex flex-col gap-3 group">
+                  <span className="text-[11px] font-serif font-bold text-white tracking-[0.3em] opacity-40 group-hover:opacity-100 transition-opacity">{item.id}</span>
+                  <h3 className="text-xl font-serif font-medium uppercase tracking-wider text-white">{item.name}</h3>
+                  <p className="text-[11px] leading-[1.8] text-white/30 font-serif tracking-tight">{item.desc}</p>
                 </div>
               ))}
             </div>
@@ -386,37 +386,37 @@ const JewelryArchive: React.FC = () => {
         {/* QUOTE */}
         <section className="archive-section min-h-screen flex flex-col items-center justify-center p-10 text-center">
           <div className="pointer-events-auto">
-            <span className="text-[120px] font-serif text-[#D4AF37]/10 leading-[0.6] mb-8 select-none">"</span>
-            <p className="text-[clamp(28px,4vw,52px)] font-serif italic font-light leading-[1.1] tracking-tight text-black max-w-3xl mb-12">
-              Le bijou est le point d'exclamation d'une tenue. Il ne se contente pas de briller, il raconte une histoire.
+            <span className="text-[120px] font-serif text-white/10 leading-[0.6] mb-8 select-none">"</span>
+            <p className="text-[clamp(28px,4vw,52px)] font-serif italic font-light leading-[1.1] tracking-tight text-white max-w-3xl mb-12 uppercase">
+              Time is the ultimate luxury. Our mission is to help you measure it with absolute precision and grace.
             </p>
-            <p className="text-[10px] uppercase tracking-[0.4em] text-black/30 font-mono">
-              <span className="text-[#D4AF37] font-bold">Jewelry Business</span> — L'éclat éternel
+            <p className="text-[10px] uppercase tracking-[0.4em] text-white/30 font-mono">
+              <span className="text-white font-bold">Luxury Watches</span> — The Gentlemen's Standard
             </p>
           </div>
         </section>
 
         {/* CTA */}
         <section className="archive-section min-h-screen flex items-end p-10 md:p-24 pb-32">
-          <div className="w-full pointer-events-auto text-black">
+          <div className="w-full pointer-events-auto text-white">
             <div className="flex items-center gap-4 mb-4">
-              <div className="w-12 h-px bg-[#D4AF37]" />
-              <span className="text-[11px] font-bold tracking-[0.4em] uppercase text-[#D4AF37]">Acquisition Privée</span>
+              <div className="w-12 h-px bg-white/40" />
+              <span className="text-[11px] font-bold tracking-[0.4em] uppercase text-white/40">Private Acquisition</span>
             </div>
             <h2 className="text-[clamp(60px,12vw,140px)] font-serif font-light leading-[0.85] tracking-tight mb-12">
-              <span className="block text-black">SUBLIMEZ</span>
-              <span className="block gold-gradient">VOTRE ALLURE</span>
+              <span className="block text-white">DEFINE</span>
+              <span className="block monochrome-gradient">YOUR TIME</span>
             </h2>
-            <div className="flex flex-col md:flex-row justify-between items-end gap-12 pt-16 border-t border-[#D4AF37]/10">
-              <button className="bg-[#D4AF37] text-white px-12 py-6 text-[12px] font-black uppercase tracking-[0.3em] transition-all hover:bg-[#B8860B] hover:tracking-[0.4em] flex items-center gap-6 group shadow-lg">
-                Commander en Ligne
+            <div className="flex flex-col md:flex-row justify-between items-end gap-12 pt-16 border-t border-white/10">
+              <button className="bg-white text-black px-12 py-6 text-[12px] font-black uppercase tracking-[0.3em] transition-all hover:bg-neutral-200 flex items-center gap-6 group shadow-2xl">
+                Enquire Online
                 <motion.span animate={{ x: [0, 8, 0] }} transition={{ repeat: Infinity, duration: 2 }}>
                   →
                 </motion.span>
               </button>
-              <div className="text-[10px] uppercase tracking-[0.2em] text-black/20 text-right leading-[2.5] font-mono">
-                <p>Édition Limitée - Collection Printemps 2026</p>
-                <p>Jewelry Business © 2026</p>
+              <div className="text-[10px] uppercase tracking-[0.2em] text-white/20 text-right leading-[2.5] font-mono">
+                <p>Limited Production - GMT Edition 2026</p>
+                <p>Luxury Watches © 2026</p>
               </div>
             </div>
           </div>
@@ -426,7 +426,7 @@ const JewelryArchive: React.FC = () => {
       <div className="fixed top-1/2 right-0 -translate-y-1/2 z-[100] flex flex-col gap-1 pointer-events-auto">
         <button 
           onClick={() => setShowSettings(!showSettings)}
-          className="bg-white/90 p-3 border border-[#D4AF37]/20 border-r-0 text-[#D4AF37] hover:bg-[#D4AF37]/10 transition-colors shadow-sm"
+          className="bg-black/90 p-3 border border-white/10 border-r-0 text-white hover:bg-white/10 transition-colors shadow-2xl"
         >
           <Settings size={18} />
         </button>
@@ -438,30 +438,30 @@ const JewelryArchive: React.FC = () => {
             initial={{ x: '100%' }}
             animate={{ x: 0 }}
             exit={{ x: '100%' }}
-            className="fixed top-0 right-0 h-full w-80 bg-white/98 border-l border-[#D4AF37]/10 z-[1000] p-10 overflow-y-auto pointer-events-auto backdrop-blur-2xl"
+            className="fixed top-0 right-0 h-full w-80 bg-black/98 border-l border-white/10 z-[1000] p-10 overflow-y-auto pointer-events-auto backdrop-blur-2xl"
           >
-            <div className="flex justify-between items-center mb-12 pb-4 border-b border-[#D4AF37]/10 text-black">
-              <h3 className="text-[10px] uppercase tracking-[0.4em] font-black text-[#D4AF37]">Configuration Lumière</h3>
-              <button onClick={() => setShowSettings(false)} className="text-black/20 hover:text-black transition-colors">✕</button>
+            <div className="flex justify-between items-center mb-12 pb-4 border-b border-white/10 text-white">
+              <h3 className="text-[10px] uppercase tracking-[0.4em] font-black text-white/60">Light Controls</h3>
+              <button onClick={() => setShowSettings(false)} className="text-white/20 hover:text-white transition-colors">✕</button>
             </div>
             
             <div className="space-y-10">
               <div className="space-y-5">
-                <label className="text-[10px] uppercase tracking-[0.3em] text-black/40 block">Exposition HDR</label>
+                <label className="text-[10px] uppercase tracking-[0.3em] text-white/40 block">Environment</label>
                 <input 
                   type="range" min="0" max="5" step="0.1" 
                   value={sceneValues.exposure} 
                   onChange={(e) => setSceneValues({...sceneValues, exposure: parseFloat(e.target.value)})}
-                  className="w-full h-1 bg-[#D4AF37]/10 rounded-full appearance-none cursor-pointer accent-[#D4AF37]"
+                  className="w-full h-1 bg-white/10 rounded-full appearance-none cursor-pointer accent-white"
                 />
               </div>
               <div className="space-y-5">
-                <label className="text-[10px] uppercase tracking-[0.3em] text-black/40 block">Intensité Éclat</label>
+                <label className="text-[10px] uppercase tracking-[0.3em] text-white/40 block">Brilliance</label>
                 <input 
                   type="range" min="0" max="10" step="0.1" 
                   value={sceneValues.keyIntensity} 
                   onChange={(e) => setSceneValues({...sceneValues, keyIntensity: parseFloat(e.target.value)})}
-                  className="w-full h-1 bg-[#D4AF37]/10 rounded-full appearance-none cursor-pointer accent-[#D4AF37]"
+                  className="w-full h-1 bg-white/10 rounded-full appearance-none cursor-pointer accent-white"
                 />
               </div>
             </div>
@@ -469,12 +469,12 @@ const JewelryArchive: React.FC = () => {
         )}
       </AnimatePresence>
 
-      <div className="fixed bottom-8 right-10 z-[50] flex items-center gap-4 opacity-30 pointer-events-none">
-        <RotateCw size={14} className="animate-spin-slow text-[#D4AF37]" />
-        <span className="text-[9px] uppercase tracking-[0.3em] font-mono text-[#D4AF37]">Rendu Or HD</span>
+      <div className="fixed bottom-8 right-10 z-[50] flex items-center gap-4 opacity-10 pointer-events-none">
+        <RotateCw size={14} className="animate-spin-slow text-white" />
+        <span className="text-[9px] uppercase tracking-[0.3em] font-mono text-white">Realtime Precision</span>
       </div>
     </div>
   );
 };
 
-export default JewelryArchive;
+export default WatchArchive;

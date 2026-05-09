@@ -32,26 +32,26 @@ const sections = [
   {
     label: "01 — The Art of Precision",
     title: "Timeless\nHeritage",
-    desc: "Forged in the heart of Geneva, our timepieces represent over a century of horological excellence. Every gear, every spring, meticulously crafted by hand.",
-    tags: ["Swiss Made", "Hand-Finished", "Calibre Elite"],
-    color: "#08080a",
-    accent: "#D4AF37"
+    desc: "Forged in the heart of horological mastery, our timepieces represent the pinnacle of engineering. Every gear, every spring, meticulously crafted for the modern gentleman.",
+    tags: ["Mechanical", "Hand-Finished", "Calibre Elite"],
+    color: "#000000",
+    accent: "#ffffff"
   },
   {
     label: "02 — Vertical Integration",
     title: "Mastery\nIn-House",
-    desc: "We don't just assemble; we create. From the smelting of our proprietary alloys to the final regulation of our tourbillons.",
-    tags: ["In-House Movement", "Gold Smeltery", "Grand Complication"],
-    color: "#08080a",
-    accent: "#D4AF37"
+    desc: "We don't just assemble; we create. From the smelting of proprietary alloys to the final regulation of our movements in Lucknow.",
+    tags: ["In-House", "Precision Hub", "Grand Complication"],
+    color: "#000000",
+    accent: "#ffffff"
   },
   {
     label: "03 — Pure Elegance",
     title: "The Silent\nStatement",
-    desc: "Luxury is felt, not just seen. A singular design language that transcends eras and defies the fleeting nature of trends.",
+    desc: "Luxury is felt, not just seen. A singular design language that transcends eras and defines the refined standard for gentlemen.",
     tags: ["Iconic Design", "Rare Materials", "Limited Series"],
-    color: "#08080a",
-    accent: "#D4AF37"
+    color: "#000000",
+    accent: "#ffffff"
   }
 ];
 
