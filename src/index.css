@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Outfit:wght@300;400;600;700&family=Space+Grotesk:wght@300;400;500;600;700&family=Barlow+Condensed:wght@700;800;900&family=Inter:wght@300;400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Cormorant Garamond", serif;
+  --font-space: "Space Grotesk", sans-serif;
+  --font-barlow: "Barlow Condensed", sans-serif;
+  --font-inter: "Inter", sans-serif;
+  --color-luxury-black: #0a0a0a;
+  --color-luxury-grey: #f8f5f0;
+  --color-accent: #111111;
+  --color-accent-glow: rgba(212, 175, 55, 0.1);
+  --color-gold: #D4AF37;
+  --color-champagne: #fdfbf7;
+}
+
+@layer base {
+  body {
+    background-color: #fdfbf7;
+    color: #111111;
+    font-family: var(--font-sans);
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-serif);
+    font-weight: 500;
+    text-transform: none;
+    letter-spacing: -0.01em;
+    color: #111111;
+  }
+}
+
+@utility text-outline {
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(212, 175, 55, 0.2);
+}
+
+@utility font-luxury {
+  font-family: var(--font-serif);
+  font-style: italic;
+  text-transform: none;
+  letter-spacing: 0.05em;
+}
+
+@utility gold-gradient {
+  background: linear-gradient(135deg, #D4AF37 0%, #F5D76E 50%, #B8860B 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@utility transition-editorial {
+  transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@utility bg-grid-scan {
+  background-image: 
+    linear-gradient(rgba(212, 175, 55, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(212, 175, 55, 0.05) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+@utility hud-glow {
+  box-shadow: 0 0 30px var(--color-accent-glow);
+}
+
+@utility corner-bracket {
+  position: relative;
+  &::before, &::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-color: var(--color-accent);
+    opacity: 0.4;
+  }
+  &::before { top: 0; left: 0; border-top: 1px solid; border-left: 1px solid; }
+  &::after { bottom: 0; right: 0; border-bottom: 1px solid; border-right: 1px solid; }
+}
+
